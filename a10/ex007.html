@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Números</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+        div#res {
+            margin-top: 20px; /*Para dar espaço entre a parte do cálculo a o texto com o resultado*/
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="txtn1" id="txtn1"> +
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res"></div>
+    <script>
+        function somar () { //temos que ter a função somar para essa tarefa. Temos que saber quem é o nº 1 e nº2
+            var tn1 = window.document.getElementById('txtn1')//objeto caixa de texto
+            var tn2 = window.document.querySelector("input#txtn2")//objeto caixa de texto 2 com queryselector
+            var res = window.document.getElementById('res')//texto que aparecerá no momento do resultado
+            var n1 = Number(tn1.value)//conversão: variável pro valor do n1 pra transformar o tipo de valor de string para number
+            var n2 = Number(tn2.value)//conversão: variável pro valor do n2
+            var s = n1 + n2 //Agora podemos somar
+            res.innerHTML = `A soma entre ${n1} e ${n2} é igual a <strong>${s}</strong>`//A soma entre n1 e n2 é igual a s
+        }
+    </script>
+    
+</body>
+
+</html>
