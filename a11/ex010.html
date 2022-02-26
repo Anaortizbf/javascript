@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h <!--entrada de dados do tipo número e demos nome e id-->
+    <input type="button" value="verificar" onclick="calcular()">
+    <div id="res"> <!--entrada de dados do tipo botão, dado o valor de verificar e tem evento onclick-->
+
+    </div>
+    <script>
+        
+        function calcular () { //criada a função de condição simples
+            var txtv = window.document.querySelector('input#txtvel') //criada a var txtv que é a ligação com a txtvel, que vai guardar o valor/reposta de txtv, nosso botão
+            var res = window.document.querySelector('div#res')//criada a variável res que pegará os valor da div res
+            var vel = Number(txtv.value) //criada a variável vel que pegará o valor da variável velocidade que o usuário digitará e vai jogar dentro da variável vel
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>` //escrevendo dentro da div que está dentro do html (inner html)
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está multado por excesso de velocidade.</p>` //+= em string concatena 
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança</p>`
+        }
+    </script>
+</body>
+</html>

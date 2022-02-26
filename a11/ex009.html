@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NACIONALIDADE</title>
+</head>
+<body>
+    <h1> Sistema de Nacionalidade</h1>
+    Informe o país <input type="text" name="txtNacionalidade" id = "txtNacionalidade" > <!--o tipo do input é texto, demos ao atributo name usado em formulários e parecido com id, uma identifição de txtNacionalidade e id do mesmo nome-->
+    <input type="button" value="Verificar" onclick="verificarNacionalidade()"> <!--Aqui inserimos outro input que é o botão de verificar. o tipo do input é botão, o valor, o que será escrito no site, é verificar, o evento é do tipo onclick e demos um valor -->
+    <div id="res"> 
+
+    </div>
+
+    <script>
+        function verificarNacionalidade() { //criamos uma função que irá verificar a Nacionalidade
+            var nacionalidade = document.querySelector('input#txtNacionalidade').value //criado a variável nacionalidade o valor seleciona o elemento 
+            var res = document.getElementById('res')//criada a variável para dar a resposta ao usuário, ela vai pegar informações de dentro da id res
+            if (nacionalidade != 'Brasil') {
+                res.innerHTML = `Você é estrangeiro.` 
+            } else {
+                res.innerHTML = `Você é um Brasileiro!`
+            }
+
+        }
+    </script>
+
+</body>
+</html>
