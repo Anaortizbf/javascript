@@ -13,16 +13,17 @@
     </header>
     <section>
         <div>
-            <p>Ano de Nascimento</p>
-                <input type="number" name="txtano" id="txtano" min="0">
+            <p>Ano de Nascimento:
+                <input type="number" name="txtano" id="txtano" min="0"> <!--dispara javascript-->
+            </p> 
             <p>Sexo:
                 <input type="radio" name="radsex" id="mas" checked>
-                <label for="masc">Masculino</label>
+                <label for="mas">Masculino</label>
                 <input type="radio" name="radsex" id="fem">
                 <label for="fem">Feminino</label>
             </p>
             <p>
-                <input type="button" value="Verificar" onclik="verificar">
+                <input type="button" value="Verificar" onclick="verificar()">
             </p>
         </div>
         
@@ -34,6 +35,6 @@
     <footer>
         <p>&copy; CursoemVideo</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
 </body>
 </html>
